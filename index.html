@@ -1,4 +1,35 @@
-<iframe style="
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Iframe</title>
+    <style>
+        html, body {
+            margin: 0;
             height: 100%;
-        
-            object-fit: contain; " src="https://lichess.org/embed/sfENcIXK"  alt="alt"/>
+            overflow: hidden; /* Prevents scrollbars from appearing */
+        }
+
+        .container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw; /* Full viewport width */
+            height: 100vh; /* Full viewport height */
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+            object-fit: contain; /* Ensure content scales within the iframe */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <iframe src="https://lichess.org/embed/sfENcIXK" allowfullscreen></iframe>
+    </div>
+</body>
+</html>
